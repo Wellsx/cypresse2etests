@@ -5,9 +5,7 @@ describe("Registration tests", () => {
   it("Open home page and click on Register button", () => {
     cy.visit("http://automationpractice.com");
 
-    cy.get(".login")
-      .should("be.visible")
-      .click()
+    cy.get(".login").should("be.visible").click()
     cy.get("#SubmitCreate").should("be.visible");
 
     cy.get("#email_create").should("be.visible")
